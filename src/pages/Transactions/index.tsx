@@ -15,7 +15,7 @@ interface Transaction {
   type: "income" | "outcome";
   price: number;
   category: string;
-  createAt: string;
+  createdAt: string;
 }
 
 export function Transaction() {
@@ -50,7 +50,7 @@ export function Transaction() {
                     </PriceHighlight>
                   </td>
                   <td>{transaction.category}</td>
-                  <td>{transaction.createAt}</td>
+                  <td>{transaction.createdAt}</td>
                 </tr>
               );
             })}
