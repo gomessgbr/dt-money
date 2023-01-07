@@ -14,8 +14,8 @@ interface Transaction{
   id: number;
   description:string;
   type: 'income' | 'outcome';
+  price: number;
   category:string;
-  price: string;
   createAt:string;
 
   
