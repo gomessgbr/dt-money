@@ -27,12 +27,15 @@ export function Transaction() {
                 <tr key={transaction.id}>
                   <td width="50%">{transaction.description}</td>
                   <td>
-                    <PriceHighlight variant="income">
+                    <PriceHighlight variant={transaction.type}>
+                      {transaction.type === "outcome" && "- "}
                       {priceFormatter.format(transaction.price)}
                     </PriceHighlight>
                   </td>
                   <td>{transaction.category}</td>
-                  <td>{dateFormatter.format(transaction.createdAt)}</td>
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
                 </tr>
               );
             })}
