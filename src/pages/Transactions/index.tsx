@@ -7,8 +7,34 @@ import {
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
+import { useEffect, useState } from "react";
+
+
+interface Transaction{
+  id: number;
+  description:string;
+  type: 'income' | 'outcome';
+  category:string;
+  price: string;
+  createAt:string;
+
+  
+}
 
 export function Transaction() {
+
+  const [transactions, setTransactions] = useState<Transaction[]>([])
+
+  async function loadTransaction() {
+    const response = await fetch("http://localhost:3000/transactions");
+    const data = await response.json();
+    setTransactions(data);
+  }
+
+  useEffect(() => {
+    loadTransaction();
+  }, []);
+
   return (
     <div>
       <Header />
