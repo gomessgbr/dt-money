@@ -22,6 +22,7 @@ interface TransactionContextType {
   transactions: Transaction[]
   fetchTransactions: (query?: string) => Promise<void>
   createTransaction: (data: CreateTransactionInput) => Promise<void>
+  deleteTransaction: (id: number) => Promise<void>
 }
 
 interface TransactionsProviderProps {
@@ -61,12 +62,23 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     [],
   )
 
+  async function deleteTransaction(id: number) {
+    const response = await api.delete(`transactions/${id}`)
+    if (response.statusText === 'OK') fetchTransactions()
+    else return alert('Transição não encontrada')
+  }
+
   useEffect(() => {
     fetchTransactions()
   }, [fetchTransactions])
   return (
     <TransactionsContext.Provider
-      value={{ transactions, fetchTransactions, createTransaction }}
+      value={{
+        transactions,
+        fetchTransactions,
+        createTransaction,
+        deleteTransaction,
+      }}
     >
       {children}
     </TransactionsContext.Provider>

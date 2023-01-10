@@ -18,6 +18,17 @@ export function Transaction() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
   })
+
+  const deleteTransactions = useContextSelector(
+    TransactionsContext,
+    (context) => {
+      return context.deleteTransaction
+    },
+  )
+  function handleDeleteTransactions(id: number) {
+    deleteTransactions(id)
+  }
+
   return (
     <div>
       <Header />
@@ -46,7 +57,11 @@ export function Transaction() {
                       <button type="button" className="pencilButton">
                         <Pencil size={20} color="#00B37E" weight="fill" />
                       </button>
-                      <button type="button" className="trashButtton">
+                      <button
+                        type="button"
+                        className="trashButtton"
+                        onClick={() => handleDeleteTransactions(transaction.id)}
+                      >
                         <Trash size={20} color="#fa0000" weight="fill" />
                       </button>
                     </TransactionsButtons>
