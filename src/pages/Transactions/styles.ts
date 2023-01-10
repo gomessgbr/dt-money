@@ -39,3 +39,15 @@ export const PriceHighlight = styled.span<PriceHighlightProps>`
       ? props.theme['green-300']
       : props.theme['red-300']};
 `
+
+export const TransactionsButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+`
