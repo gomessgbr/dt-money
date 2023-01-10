@@ -80,7 +80,7 @@ export function NewTransactionModal() {
           />
           <input
             type="text"
-            placeholder="Catergoria"
+            placeholder="Categoria"
             required
             {...register('category')}
           />
