@@ -20,6 +20,7 @@ Projeto que tem por objetivo registro de finanças, sendo possível criar transa
 - [RadixUI](https://www.radix-ui.com/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 - [Use Context Selector](https://www.npmjs.com/package/use-context-selector)
+- [json-server](https://github.com/typicode/json-server)
 
 ## ScreenShot
 
