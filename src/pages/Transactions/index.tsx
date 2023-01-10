@@ -12,7 +12,7 @@ import { SearchForm } from './components/SearchForm'
 import { TransactionsContext } from '../../contexts/TransactionContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { useContextSelector } from 'use-context-selector'
-import { Pencil, Trash } from 'phosphor-react'
+import { Trash } from 'phosphor-react'
 
 export function Transaction() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
@@ -25,6 +25,7 @@ export function Transaction() {
       return context.deleteTransaction
     },
   )
+
   function handleDeleteTransactions(id: number) {
     deleteTransactions(id)
   }
@@ -54,9 +55,6 @@ export function Transaction() {
                   </td>
                   <td>
                     <TransactionsButtons>
-                      <button type="button" className="pencilButton">
-                        <Pencil size={20} color="#00B37E" weight="fill" />
-                      </button>
                       <button
                         type="button"
                         className="trashButtton"
