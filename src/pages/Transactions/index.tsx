@@ -13,6 +13,7 @@ import { TransactionsContext } from '../../contexts/TransactionContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { useContextSelector } from 'use-context-selector'
 import { Trash } from 'phosphor-react'
+import { Pagination } from '../../components/Pagination'
 
 export function Transaction() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
@@ -70,6 +71,8 @@ export function Transaction() {
           </tbody>
         </TransactionTable>
       </TransactionContainer>
+
+      <Pagination />
     </div>
   )
 }
