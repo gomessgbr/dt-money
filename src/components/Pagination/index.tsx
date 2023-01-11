@@ -22,10 +22,10 @@ export function Pagination() {
   useEffect(() => {
     const totalTransactionsNumber: number = Number(totalTransactions)
     const result: number = Math.ceil(totalTransactionsNumber / 10)
-    setPages([...Array(result).keys()])
+    setPages([...Array<number>(result).keys()])
   }, [totalTransactions])
 
-  async function handleButtonClick(pageValue: Number) {
+  async function handleButtonClick(pageValue: number) {
     await fetchTransactions('', pageValue)
   }
 
