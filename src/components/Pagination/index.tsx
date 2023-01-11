@@ -2,21 +2,9 @@ import { useEffect, useState } from 'react'
 import { useContextSelector } from 'use-context-selector'
 import { TransactionsContext } from '../../contexts/TransactionContext'
 
-import { PaginationContainer } from './styles'
+import { PaginationContainer, PaginationContent } from './styles'
 
-interface PaginationProps {
-  totalPages: number
-  currentPage: number
-  // setCurrentPage: () => void
-  transferPerPage: number
-}
-
-export function Pagination({
-  totalPages,
-  currentPage,
-  // setCurrentPage,
-  transferPerPage,
-}: PaginationProps) {
+export function Pagination() {
   const [pages, setPages] = useState<Number[]>([])
 
   const totalTransactions = useContextSelector(
@@ -37,14 +25,13 @@ export function Pagination({
     setPages([...Array(result).keys()])
   }, [totalTransactions])
 
-  function handleButtonClick(pageValue: Number) {
-    // fetchTransactions()
-    console.log(pageValue)
+  async function handleButtonClick(pageValue: Number) {
+    await fetchTransactions('', pageValue)
   }
 
   return (
     <PaginationContainer>
-      <div>
+      <PaginationContent>
         {pages.map((page, index) => {
           return (
             <button
@@ -56,7 +43,7 @@ export function Pagination({
             </button>
           )
         })}
-      </div>
+      </PaginationContent>
     </PaginationContainer>
   )
 }
