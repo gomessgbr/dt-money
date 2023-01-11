@@ -19,8 +19,9 @@ interface CreateTransactionInput {
 }
 
 interface TransactionContextType {
+  totalTransaction: string | undefined
   transactions: Transaction[]
-  fetchTransactions: (query?: string) => Promise<void>
+  fetchTransactions: (query?: string, page?: number) => Promise<void>
   createTransaction: (data: CreateTransactionInput) => Promise<void>
   deleteTransaction: (id: number) => Promise<void>
 }
@@ -33,17 +34,35 @@ export const TransactionsContext = createContext({} as TransactionContextType)
 
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([])
+  const [totalTransaction, setTotalTransactions] = useState<string>('')
 
-  const fetchTransactions = useCallback(async (query?: string) => {
-    const response = await api.get('/transactions', {
-      params: {
-        _sort: 'createdAt',
-        _order: 'cresc',
-        q: query,
-      },
-    })
-    setTransactions(response.data)
-  }, [])
+  const fetchTransactions = useCallback(
+    async (query?: string, page?: number) => {
+      let response
+      query
+        ? (response = await api.get('/transactions', {
+            params: {
+              _sort: 'createdAt',
+              _order: 'desc',
+              _limit: 10,
+              _page: page,
+              q: query,
+            },
+          }))
+        : (response = await api.get('/transactions', {
+            params: {
+              _sort: 'createdAt',
+              _order: 'desc',
+              _limit: 10,
+              _page: page,
+            },
+          }))
+
+      setTotalTransactions(response.headers['x-total-count'] ?? '')
+      setTransactions(response.data)
+    },
+    [],
+  )
 
   const createTransaction = useCallback(
     async (data: CreateTransactionInput) => {
@@ -71,9 +90,11 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   useEffect(() => {
     fetchTransactions()
   }, [fetchTransactions])
+
   return (
     <TransactionsContext.Provider
       value={{
+        totalTransaction,
         transactions,
         fetchTransactions,
         createTransaction,
