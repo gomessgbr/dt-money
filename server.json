@@ -71,6 +71,222 @@
       "type": "outcome",
       "createdAt": "2023-01-09T21:25:42.584Z",
       "id": 9
+    },
+    {
+      "description": "Test12",
+      "price": 123131,
+      "category": "asfaf",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:40:42.566Z",
+      "id": 10
+    },
+    {
+      "description": "Creatina",
+      "price": 149999,
+      "category": "Alimentação",
+      "type": "income",
+      "createdAt": "2023-01-10T18:41:58.766Z",
+      "id": 11
+    },
+    {
+      "description": "Pastel",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:42:08.240Z",
+      "id": 12
+    },
+    {
+      "description": "Pastel",
+      "price": 15000,
+      "category": "Saúde",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:42:23.945Z",
+      "id": 13
+    },
+    {
+      "description": "Whey",
+      "price": 1000,
+      "category": "Saúde",
+      "type": "income",
+      "createdAt": "2023-01-10T18:42:30.491Z",
+      "id": 14
+    },
+    {
+      "description": "Creatina",
+      "price": 10,
+      "category": "Saúde",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:42:38.978Z",
+      "id": 15
+    },
+    {
+      "description": "asdasd",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:42:45.880Z",
+      "id": 16
+    },
+    {
+      "description": "adsad",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-10T18:42:51.715Z",
+      "id": 17
+    },
+    {
+      "description": "Desenvolvimento de tabela",
+      "price": 1000,
+      "category": "Trabalho",
+      "type": "income",
+      "createdAt": "2023-01-11T13:22:12.373Z",
+      "id": 18
+    },
+    {
+      "description": "Criação de logo",
+      "price": 1000,
+      "category": "Trabalho",
+      "type": "outcome",
+      "createdAt": "2023-01-11T13:22:29.049Z",
+      "id": 19
+    },
+    {
+      "description": "Carro",
+      "price": 100000,
+      "category": "Gastos",
+      "type": "outcome",
+      "createdAt": "2023-01-11T13:22:42.547Z",
+      "id": 20
+    },
+    {
+      "description": "Creatina",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T13:23:13.665Z",
+      "id": 21
+    },
+    {
+      "description": "TesteCount",
+      "price": 1000,
+      "category": "Teste",
+      "type": "income",
+      "createdAt": "2023-01-11T14:15:47.808Z",
+      "id": 22
+    },
+    {
+      "description": "Bufunfa ",
+      "price": 100000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2023-01-11T14:55:58.576Z",
+      "id": 23
+    },
+    {
+      "description": "Bufunfa ",
+      "price": 1000000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2023-01-11T14:56:12.065Z",
+      "id": 24
+    },
+    {
+      "description": "asdfasd",
+      "price": 12313,
+      "category": "Alimentação",
+      "type": "income",
+      "createdAt": "2023-01-11T15:23:11.698Z",
+      "id": 25
+    },
+    {
+      "description": "asfaf",
+      "price": 1231312313,
+      "category": "Zica",
+      "type": "income",
+      "createdAt": "2023-01-11T15:23:20.179Z",
+      "id": 26
+    },
+    {
+      "description": "asdasfsaf",
+      "price": 1231312,
+      "category": "asdafas",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:23:26.602Z",
+      "id": 27
+    },
+    {
+      "description": "asafgafas",
+      "price": 1000000,
+      "category": "Alimentação",
+      "type": "income",
+      "createdAt": "2023-01-11T15:23:36.378Z",
+      "id": 28
+    },
+    {
+      "description": "asdasfasfa",
+      "price": 1000000,
+      "category": "sadasfsa",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:23:45.112Z",
+      "id": 29
+    },
+    {
+      "description": "asdasfsa",
+      "price": 12312312312,
+      "category": "asdasd",
+      "type": "income",
+      "createdAt": "2023-01-11T15:23:58.348Z",
+      "id": 30
+    },
+    {
+      "description": "asdafsfa",
+      "price": 12313412,
+      "category": "asdfafasfasf",
+      "type": "income",
+      "createdAt": "2023-01-11T15:24:09.143Z",
+      "id": 31
+    },
+    {
+      "description": "asfasfasdf",
+      "price": 1000,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:24:21.264Z",
+      "id": 32
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:24:27.120Z",
+      "id": 33
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:24:32.234Z",
+      "id": 34
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 1000,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:24:36.832Z",
+      "id": 35
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 123,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-01-11T15:24:41.671Z",
+      "id": 36
     }
   ]
 }
