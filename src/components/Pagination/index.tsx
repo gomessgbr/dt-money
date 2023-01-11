@@ -5,7 +5,7 @@ import { TransactionsContext } from '../../contexts/TransactionContext'
 import { PaginationContainer, PaginationContent } from './styles'
 
 export function Pagination() {
-  const [pages, setPages] = useState<Number[]>([])
+  const [pages, setPages] = useState<number[]>([])
 
   const totalTransactions = useContextSelector(
     TransactionsContext,
