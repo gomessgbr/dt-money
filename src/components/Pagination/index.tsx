@@ -39,7 +39,7 @@ export function Pagination() {
               type="button"
               onClick={() => handleButtonClick(page)}
             >
-              {`${page} ...`}
+              {`${page}`}
             </button>
           )
         })}
